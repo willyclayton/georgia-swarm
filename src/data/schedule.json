@@ -1,0 +1,1153 @@
+[
+  {
+    "code": "WK01",
+    "id": 31382,
+    "matches": {
+      "2": {
+        "id": 703331825,
+        "weekOrder": 3,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 11,
+              "score": 11
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          },
+          "home": {
+            "score": {
+              "goals": 15,
+              "score": 15
+            },
+            "id": 509,
+            "code": "BUF",
+            "name": "Buffalo",
+            "nickname": "Bandits",
+            "displayName": "Buffalo Bandits"
+          }
+        },
+        "date": {
+          "startDate": "2025-11-29",
+          "startTime": "19:30:00",
+          "utcMatchStart": "2025-11-30T00:30:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 613,
+          "code": "KBC",
+          "name": "KeyBank Center",
+          "timeZone": "US/Eastern"
+        },
+        "winningSquadId": 509
+      }
+    },
+    "name": "Week 01",
+    "number": 1,
+    "phaseNumber": 1,
+    "season_id": "225"
+  },
+  {
+    "code": "WK02",
+    "id": 31383,
+    "matches": [],
+    "name": "Week 02",
+    "number": 2,
+    "phaseNumber": 2
+  },
+  {
+    "code": "WK03",
+    "id": 31384,
+    "matches": {
+      "4": {
+        "id": 703363857,
+        "weekOrder": 5,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 5,
+              "score": 5
+            },
+            "id": 548,
+            "code": "OSH",
+            "name": "Oshawa",
+            "nickname": "FireWolves",
+            "displayName": "Oshawa FireWolves"
+          },
+          "home": {
+            "score": {
+              "goals": 9,
+              "score": 9
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          }
+        },
+        "date": {
+          "startDate": "2025-12-13",
+          "startTime": "19:30:00",
+          "utcMatchStart": "2025-12-14T00:30:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 645,
+          "code": "GSA",
+          "name": "Gas South Arena",
+          "timeZone": "US/Eastern"
+        },
+        "winningSquadId": 539
+      }
+    },
+    "name": "Week 03",
+    "number": 3,
+    "phaseNumber": 3
+  },
+  {
+    "code": "WK04",
+    "id": 31385,
+    "matches": {
+      "2": {
+        "id": 703380496,
+        "weekOrder": 3,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 4,
+              "score": 4
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          },
+          "home": {
+            "score": {
+              "goals": 7,
+              "score": 7
+            },
+            "id": 540,
+            "code": "SSK",
+            "name": "Saskatchewan",
+            "nickname": "Rush",
+            "displayName": "Saskatchewan Rush"
+          }
+        },
+        "date": {
+          "startDate": "2025-12-20",
+          "startTime": "19:00:00",
+          "utcMatchStart": "2025-12-21T01:00:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 644,
+          "code": "STC",
+          "name": "SaskTel Centre",
+          "timeZone": "Canada/Saskatchewan"
+        },
+        "winningSquadId": 540
+      }
+    },
+    "name": "Week 04",
+    "number": 4,
+    "phaseNumber": 4
+  },
+  {
+    "code": "WK05",
+    "id": 31386,
+    "matches": {
+      "3": {
+        "id": 703388931,
+        "weekOrder": 4,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 12,
+              "score": 12
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          },
+          "home": {
+            "score": {
+              "goals": 3,
+              "score": 3
+            },
+            "id": 525,
+            "code": "COL",
+            "name": "Colorado",
+            "nickname": "Mammoth",
+            "displayName": "Colorado Mammoth"
+          }
+        },
+        "date": {
+          "startDate": "2025-12-27",
+          "startTime": "19:00:00",
+          "utcMatchStart": "2025-12-28T02:00:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 626,
+          "code": "BA",
+          "name": "Ball Arena",
+          "timeZone": "US/Mountain"
+        },
+        "winningSquadId": 539
+      }
+    },
+    "name": "Week 05",
+    "number": 5,
+    "phaseNumber": 5
+  },
+  {
+    "code": "WK06",
+    "id": 31387,
+    "matches": [],
+    "name": "Week 06",
+    "number": 6,
+    "phaseNumber": 6
+  },
+  {
+    "code": "WK07",
+    "id": 31388,
+    "matches": {
+      "7": {
+        "id": 719932178,
+        "weekOrder": 8,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 7,
+              "score": 7
+            },
+            "id": 525,
+            "code": "COL",
+            "name": "Colorado",
+            "nickname": "Mammoth",
+            "displayName": "Colorado Mammoth"
+          },
+          "home": {
+            "score": {
+              "goals": 5,
+              "score": 5
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          }
+        },
+        "date": {
+          "startDate": "2026-01-10",
+          "startTime": "19:30:00",
+          "utcMatchStart": "2026-01-11T00:30:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 645,
+          "code": "GSA",
+          "name": "Gas South Arena",
+          "timeZone": "US/Eastern"
+        },
+        "winningSquadId": 525
+      }
+    },
+    "name": "Week 07",
+    "number": 7,
+    "phaseNumber": 7
+  },
+  {
+    "code": "WK08",
+    "id": 31389,
+    "matches": {
+      "2": {
+        "id": 719948560,
+        "weekOrder": 3,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 9,
+              "score": 9
+            },
+            "id": 524,
+            "code": "CGY",
+            "name": "Calgary",
+            "nickname": "Roughnecks",
+            "displayName": "Calgary Roughnecks"
+          },
+          "home": {
+            "score": {
+              "goals": 19,
+              "score": 19
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          }
+        },
+        "date": {
+          "startDate": "2026-01-16",
+          "startTime": "20:00:00",
+          "utcMatchStart": "2026-01-17T03:00:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 4245,
+          "code": "RPE",
+          "name": "Rogers Place",
+          "timeZone": "Canada/Mountain"
+        },
+        "winningSquadId": 539
+      }
+    },
+    "name": "Week 08",
+    "number": 8,
+    "phaseNumber": 8
+  },
+  {
+    "code": "WK09",
+    "id": 31390,
+    "matches": {
+      "2": {
+        "id": 719962880,
+        "weekOrder": 3,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 10,
+              "score": 10
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          },
+          "home": {
+            "score": {
+              "goals": 9,
+              "score": 9
+            },
+            "id": 515,
+            "code": "TOR",
+            "name": "Toronto",
+            "nickname": "Rock",
+            "displayName": "Toronto Rock"
+          }
+        },
+        "date": {
+          "startDate": "2026-01-24",
+          "startTime": "19:00:00",
+          "utcMatchStart": "2026-01-25T00:00:00.000Z"
+        },
+        "status": {
+          "period": 5,
+          "periodSecs": 30,
+          "periodDisplay": "Full Time",
+          "periodTime": "00:30",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 615,
+          "code": "TDC",
+          "name": "TD Coliseum",
+          "timeZone": "Canada/Eastern"
+        },
+        "winningSquadId": 539
+      }
+    },
+    "name": "Week 09",
+    "number": 9,
+    "phaseNumber": 9
+  },
+  {
+    "code": "WK10",
+    "id": 31391,
+    "matches": {
+      "2": {
+        "id": 719970339,
+        "weekOrder": 3,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 11,
+              "score": 11
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          },
+          "home": {
+            "score": {
+              "goals": 7,
+              "score": 7
+            },
+            "id": 544,
+            "code": "HFX",
+            "name": "Halifax",
+            "nickname": "Thunderbirds",
+            "displayName": "Halifax Thunderbirds"
+          }
+        },
+        "date": {
+          "startDate": "2026-01-31",
+          "startTime": "19:00:00",
+          "utcMatchStart": "2026-01-31T23:00:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 648,
+          "code": "SC",
+          "name": "Scotiabank Centre",
+          "timeZone": "Canada/Atlantic"
+        },
+        "winningSquadId": 539
+      }
+    },
+    "name": "Week 10",
+    "number": 10,
+    "phaseNumber": 10
+  },
+  {
+    "code": "WK11",
+    "id": 31392,
+    "matches": {
+      "3": {
+        "id": 719989523,
+        "weekOrder": 4,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 9,
+              "score": 9
+            },
+            "id": 549,
+            "code": "LV",
+            "name": "Las Vegas",
+            "nickname": "Desert Dogs",
+            "displayName": "Las Vegas Desert Dogs"
+          },
+          "home": {
+            "score": {
+              "goals": 12,
+              "score": 12
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          }
+        },
+        "date": {
+          "startDate": "2026-02-07",
+          "startTime": "19:30:00",
+          "utcMatchStart": "2026-02-08T00:30:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 645,
+          "code": "GSA",
+          "name": "Gas South Arena",
+          "timeZone": "US/Eastern"
+        },
+        "winningSquadId": 539
+      }
+    },
+    "name": "Week 11",
+    "number": 11,
+    "phaseNumber": 11
+  },
+  {
+    "code": "WK12",
+    "id": 31393,
+    "matches": {
+      "7": {
+        "id": 720006147,
+        "weekOrder": 8,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 11,
+              "score": 11
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          },
+          "home": {
+            "score": {
+              "goals": 6,
+              "score": 6
+            },
+            "id": 524,
+            "code": "CGY",
+            "name": "Calgary",
+            "nickname": "Roughnecks",
+            "displayName": "Calgary Roughnecks"
+          }
+        },
+        "date": {
+          "startDate": "2026-02-15",
+          "startTime": "18:00:00",
+          "utcMatchStart": "2026-02-16T01:00:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 623,
+          "code": "WJFSS",
+          "name": "WestJet Field at Scotiabank Saddledome",
+          "timeZone": "Canada/Mountain"
+        },
+        "winningSquadId": 539
+      }
+    },
+    "name": "Week 12",
+    "number": 12,
+    "phaseNumber": 12
+  },
+  {
+    "code": "WK13",
+    "id": 31394,
+    "matches": [],
+    "name": "Week 13",
+    "number": 13,
+    "phaseNumber": 13
+  },
+  {
+    "code": "WK14",
+    "id": 31395,
+    "matches": {
+      "0": {
+        "id": 720030995,
+        "weekOrder": 1,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 11,
+              "score": 11
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          },
+          "home": {
+            "score": {
+              "goals": 6,
+              "score": 6
+            },
+            "id": 541,
+            "code": "PHI",
+            "name": "Philadelphia",
+            "nickname": "Wings",
+            "displayName": "Philadelphia Wings"
+          }
+        },
+        "date": {
+          "startDate": "2026-02-27",
+          "startTime": "19:00:00",
+          "utcMatchStart": "2026-02-28T00:00:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 614,
+          "code": "XMA",
+          "name": "Xfinity Mobile Arena",
+          "timeZone": "US/Eastern"
+        },
+        "winningSquadId": 539
+      },
+      "7": {
+        "id": 720038672,
+        "weekOrder": 8,
+        "squads": {
+          "away": {
+            "score": {
+              "goals": 9,
+              "score": 9
+            },
+            "id": 541,
+            "code": "PHI",
+            "name": "Philadelphia",
+            "nickname": "Wings",
+            "displayName": "Philadelphia Wings"
+          },
+          "home": {
+            "score": {
+              "goals": 5,
+              "score": 5
+            },
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          }
+        },
+        "date": {
+          "startDate": "2026-02-28",
+          "startTime": "19:30:00",
+          "utcMatchStart": "2026-03-01T00:30:00.000Z"
+        },
+        "status": {
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 645,
+          "code": "GSA",
+          "name": "Gas South Arena",
+          "timeZone": "US/Eastern"
+        },
+        "winningSquadId": 541
+      }
+    },
+    "name": "Week 14",
+    "number": 14,
+    "phaseNumber": 14
+  },
+  {
+    "code": "WK15",
+    "id": 31396,
+    "matches": [],
+    "name": "Week 15",
+    "number": 15,
+    "phaseNumber": 15
+  },
+  {
+    "code": "WK16",
+    "id": 31397,
+    "matches": {
+      "3": {
+        "id": 720071442,
+        "weekOrder": 4,
+        "squads": {
+          "away": {
+            "id": 543,
+            "code": "VAN",
+            "name": "Vancouver",
+            "nickname": "Warriors",
+            "displayName": "Vancouver Warriors"
+          },
+          "home": {
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          }
+        },
+        "date": {
+          "startDate": "2026-03-14",
+          "startTime": "19:30:00",
+          "utcMatchStart": "2026-03-14T23:30:00.000Z"
+        },
+        "status": {
+          "id": 8,
+          "name": "Scheduled",
+          "code": "SCHED",
+          "typeId": 2,
+          "typeName": "Upcoming"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 645,
+          "code": "GSA",
+          "name": "Gas South Arena",
+          "timeZone": "US/Eastern"
+        }
+      }
+    },
+    "name": "Week 16",
+    "number": 16,
+    "phaseNumber": 16
+  },
+  {
+    "code": "WK17",
+    "id": 31398,
+    "matches": {
+      "1": {
+        "id": 720087824,
+        "weekOrder": 2,
+        "squads": {
+          "away": {
+            "id": 544,
+            "code": "HFX",
+            "name": "Halifax",
+            "nickname": "Thunderbirds",
+            "displayName": "Halifax Thunderbirds"
+          },
+          "home": {
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          }
+        },
+        "date": {
+          "startDate": "2026-03-20",
+          "startTime": "19:30:00",
+          "utcMatchStart": "2026-03-20T23:30:00.000Z"
+        },
+        "status": {
+          "id": 8,
+          "name": "Scheduled",
+          "code": "SCHED",
+          "typeId": 2,
+          "typeName": "Upcoming"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 645,
+          "code": "GSA",
+          "name": "Gas South Arena",
+          "timeZone": "US/Eastern"
+        }
+      }
+    },
+    "name": "Week 17",
+    "number": 17,
+    "phaseNumber": 17
+  },
+  {
+    "code": "WK18",
+    "id": 31399,
+    "matches": {
+      "1": {
+        "id": 720101664,
+        "weekOrder": 2,
+        "squads": {
+          "away": {
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          },
+          "home": {
+            "id": 545,
+            "code": "OTT",
+            "name": "Ottawa",
+            "nickname": "Black Bears",
+            "displayName": "Ottawa Black Bears"
+          }
+        },
+        "date": {
+          "startDate": "2026-03-28",
+          "startTime": "19:00:00",
+          "utcMatchStart": "2026-03-28T23:00:00.000Z"
+        },
+        "status": {
+          "id": 8,
+          "name": "Scheduled",
+          "code": "SCHED",
+          "typeId": 2,
+          "typeName": "Upcoming"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 622,
+          "code": "CTC",
+          "name": "Canadian Tire Centre",
+          "timeZone": "Canada/Eastern"
+        }
+      }
+    },
+    "name": "Week 18",
+    "number": 18,
+    "phaseNumber": 18
+  },
+  {
+    "code": "WK19",
+    "id": 31400,
+    "matches": [],
+    "name": "Week 19",
+    "number": 19,
+    "phaseNumber": 19
+  },
+  {
+    "code": "WK20",
+    "id": 31401,
+    "matches": {
+      "6": {
+        "id": 720136976,
+        "weekOrder": 7,
+        "squads": {
+          "away": {
+            "id": 542,
+            "code": "SD",
+            "name": "San Diego",
+            "nickname": "Seals",
+            "displayName": "San Diego Seals"
+          },
+          "home": {
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          }
+        },
+        "date": {
+          "startDate": "2026-04-12",
+          "startTime": "16:00:00",
+          "utcMatchStart": "2026-04-12T20:00:00.000Z"
+        },
+        "status": {
+          "id": 8,
+          "name": "Scheduled",
+          "code": "SCHED",
+          "typeId": 2,
+          "typeName": "Upcoming"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 645,
+          "code": "GSA",
+          "name": "Gas South Arena",
+          "timeZone": "US/Eastern"
+        }
+      }
+    },
+    "name": "Week 20",
+    "number": 20,
+    "phaseNumber": 20
+  },
+  {
+    "code": "WK21",
+    "id": 31402,
+    "matches": {
+      "1": {
+        "id": 720145170,
+        "weekOrder": 2,
+        "squads": {
+          "away": {
+            "id": 546,
+            "code": "ROC",
+            "name": "Rochester",
+            "nickname": "Knighthawks",
+            "displayName": "Rochester Knighthawks"
+          },
+          "home": {
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          }
+        },
+        "date": {
+          "startDate": "2026-04-18",
+          "startTime": "16:00:00",
+          "utcMatchStart": "2026-04-18T20:00:00.000Z"
+        },
+        "status": {
+          "id": 8,
+          "name": "Scheduled",
+          "code": "SCHED",
+          "typeId": 2,
+          "typeName": "Upcoming"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 645,
+          "code": "GSA",
+          "name": "Gas South Arena",
+          "timeZone": "US/Eastern"
+        }
+      },
+      "8": {
+        "id": 720142883,
+        "weekOrder": 9,
+        "squads": {
+          "away": {
+            "id": 539,
+            "code": "GA",
+            "name": "Georgia",
+            "nickname": "Swarm",
+            "displayName": "Georgia Swarm"
+          },
+          "home": {
+            "id": 546,
+            "code": "ROC",
+            "name": "Rochester",
+            "nickname": "Knighthawks",
+            "displayName": "Rochester Knighthawks"
+          }
+        },
+        "date": {
+          "startDate": "2026-04-19",
+          "startTime": "15:00:00",
+          "utcMatchStart": "2026-04-19T19:00:00.000Z"
+        },
+        "status": {
+          "id": 8,
+          "name": "Scheduled",
+          "code": "SCHED",
+          "typeId": 2,
+          "typeName": "Upcoming"
+        },
+        "type": {
+          "id": 1,
+          "name": "Regular Season",
+          "code": "REG"
+        },
+        "venue": {
+          "id": 610,
+          "code": "BCA",
+          "name": "Blue Cross Arena",
+          "timeZone": "US/Eastern"
+        }
+      }
+    },
+    "name": "Week 21",
+    "number": 21,
+    "phaseNumber": 21
+  }
+]

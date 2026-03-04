@@ -1,0 +1,30 @@
+name: Fetch NLL Data
+
+on:
+  schedule:
+    - cron: '0 13 * * *'  # 8am ET (UTC-5) daily
+  workflow_dispatch:        # manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch data from NLL APIs
+        run: node scripts/fetch-data.js
+
+      - name: Commit updated data
+        run: |
+          git config user.email "swarm-bot@github.com"
+          git config user.name "Swarm Data Bot"
+          git add src/data/
+          git diff --staged --quiet || git commit -m "chore: update NLL data $(date -u +%Y-%m-%d)"
+          git push
