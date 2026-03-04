@@ -1,6 +1,9 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
+import logoMapData from '@/data/team-logos.json';
+
+const logoMap = logoMapData as Record<string, string>;
 
 const TEAM_COLORS: Record<string, string> = {
   GEO: '#1d4fbd',
@@ -31,6 +34,8 @@ export function TeamLogo({ teamCode, teamName, size = 40, className = '' }: Prop
   const color = TEAM_COLORS[code] ?? '#4b5563';
   const [error, setError] = useState(false);
 
+  const logoUrl = logoMap[code] || `/logos/${code}.png`;
+
   return (
     <div
       className={`relative flex-shrink-0 rounded-full overflow-hidden flex items-center justify-center ${className}`}
@@ -42,7 +47,7 @@ export function TeamLogo({ teamCode, teamName, size = 40, className = '' }: Prop
         </span>
       ) : (
         <Image
-          src={`/logos/${code}.png`}
+          src={logoUrl}
           alt={teamName ?? teamCode}
           width={size}
           height={size}

@@ -19,7 +19,11 @@ export function LeaderBoard({ players, stat, label }: Props) {
     .slice(0, 5);
 
   if (sorted.length === 0) {
-    return <p className="text-swarm-muted text-sm text-center py-8">No data available</p>;
+    return (
+      <p className="text-swarm-muted text-sm text-center py-8">
+        Season stats not yet available — check back after game updates.
+      </p>
+    );
   }
 
   const max = sorted[0].stats[stat] ?? 1;

@@ -47,6 +47,13 @@ async function fetchSwarmAjax(action, extra = {}) {
   return res.json();
 }
 
+// Map team_id → code (mirrors src/lib/data.ts)
+const ID_TO_CODE = {
+  539: 'GEO', 540: 'SSK', 525: 'COL', 543: 'VAN', 545: 'OTT',
+  515: 'TOR', 509: 'BUF', 542: 'SD', 546: 'ROC', 549: 'LV',
+  544: 'HFX', 541: 'PHI', 524: 'CGY', 548: 'OSH',
+};
+
 // ── 1. Standings ─────────────────────────────────────────────────────────────
 async function fetchStandings() {
   console.log('Fetching standings...');
@@ -55,6 +62,17 @@ async function fetchStandings() {
   // Normalize to array of teams
   const teams = raw?.data?.standings ?? raw?.standings ?? raw ?? [];
   write('standings.json', teams);
+
+  // Extract logo URLs into a code → URL map
+  // API shape: { standings_pretty: { "": [teams], "East": [teams], ... } }
+  const prettyDivisions = raw?.standings_pretty ?? raw?.data?.standings_pretty ?? {};
+  let rawTeams = Object.values(prettyDivisions).flat();
+  const logoMap = {};
+  for (const team of rawTeams) {
+    const code = ID_TO_CODE[team.team_id] ?? team.team_code;
+    if (code && team.logo_url) logoMap[code] = team.logo_url;
+  }
+  write('team-logos.json', logoMap);
 }
 
 // ── 2. Schedule ───────────────────────────────────────────────────────────────
@@ -75,30 +93,18 @@ async function fetchRoster() {
   const map = raw?.map ?? {};
 
   const players = Object.values(map).map((p) => {
-    // headshot: p.headshot is an object with image variants — use the largest available
+    // headshot: correct path is sizes.player_headshot or top-level url
     const headshotUrl =
-      p.headshot?.['300x400']?.url ??
-      p.headshot?.full?.url ??
-      p.headshot?.thumbnail?.url ?? '';
+      p.headshot?.sizes?.player_headshot ??
+      p.headshot?.url ?? '';
 
-    // matches: p.matches is an object of game entries with stats
-    const gameLog = Object.values(p.matches ?? {}).map((m) => ({
-      game_id: String(m.match_id ?? ''),
-      goals:   m.goals ?? 0,
-      assists: m.assists ?? 0,
-      points:  (m.goals ?? 0) + (m.assists ?? 0),
-    }));
-
-    // Season totals — sum across game log
-    const totals = gameLog.reduce(
-      (acc, g) => ({ gp: acc.gp + 1, goals: acc.goals + g.goals, assists: acc.assists + g.assists }),
-      { gp: 0, goals: 0, assists: 0 }
-    );
+    // matches: {"season": N} — games played count only, no per-game stats
+    const gp = p.matches?.season ?? 0;
 
     return {
       id:          p.personId ?? p.champion_data_id,
-      name:        p.displayName ?? p.fullname ?? '',
-      slug:        slugify(p.displayName ?? p.fullname ?? ''),
+      name:        p.fullname ?? p.displayName ?? '',
+      slug:        slugify(p.fullname ?? p.displayName ?? ''),
       number:      p.jerseyNumber ?? '',
       position:    normalizePosition(p.position ?? ''),
       hometown:    p.hometown ?? '',
@@ -108,16 +114,16 @@ async function fetchRoster() {
       weight:      p.weight ? `${p.weight} lbs` : '',
       headshotUrl,
       stats: {
-        gp:         totals.gp,
-        goals:      totals.goals,
-        assists:    totals.assists,
-        points:     totals.goals + totals.assists,
+        gp,
+        goals:      0,
+        assists:    0,
+        points:     0,
         plusMinus:  0,
         pims:       0,
         saves:      p.position === 'G' ? (p.saves ?? null) : null,
         savesPct:   p.position === 'G' ? (p.save_percentage ?? null) : null,
       },
-      gameLog,
+      gameLog: [],
     };
   });
 
