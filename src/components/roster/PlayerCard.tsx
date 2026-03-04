@@ -37,8 +37,8 @@ export function PlayerCard({ player }: Props) {
           </div>
         )}
         {/* Number badge */}
-        <div className="absolute top-2 left-2 bg-swarm-navy/80 text-swarm-gold text-xs font-bold px-2 py-0.5 rounded-full">
-          #{player.number}
+        <div className="absolute top-2.5 left-2.5 bg-swarm-navy text-swarm-gold border-2 border-swarm-gold text-[22px] font-black leading-none px-2.5 py-[3px] rounded-lg min-w-[42px] text-center">
+          {player.number}
         </div>
       </div>
 
