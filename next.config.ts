@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       { hostname: 'georgiaswarm.com' },
       { hostname: 'nll.com' },
       { hostname: 'nllstatsapp.aordev.com' },
+      { hostname: 'nllmetaserver.aordev.com' },
     ],
   },
 };

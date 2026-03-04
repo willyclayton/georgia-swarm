@@ -69,43 +69,71 @@ async function fetchSchedule() {
 // ── 3. Roster + Player Stats ─────────────────────────────────────────────────
 async function fetchRoster() {
   console.log('Fetching roster...');
-  const raw = await fetchSwarmAjax('nll_sportlogiq', { getTeamPlayerListing: 'true' });
-  const players = raw?.data?.players ?? raw?.players ?? raw ?? [];
+  const url = `${NLL_API}?data_type=players&team_id=${TEAM_ID}&season_id=${SEASON_ID}`;
+  const raw = await fetchJson(url);
+  // Response shape: { map: { "<personId>": { player fields... } } }
+  const map = raw?.map ?? {};
 
-  // Normalize player objects
-  const normalized = players.map((p) => ({
-    id: p.player_id ?? p.id,
-    name: p.player_name ?? p.name ?? '',
-    slug: slugify(p.player_name ?? p.name ?? ''),
-    number: p.jersey_number ?? p.number ?? '',
-    position: normalizePosition(p.position ?? p.player_position ?? ''),
-    hometown: p.hometown ?? '',
-    college: p.college ?? '',
-    age: p.age ?? null,
-    height: p.height ?? '',
-    weight: p.weight ?? '',
-    headshotUrl: p.headshot_url ?? p.image ?? '',
-    stats: {
-      gp: p.games_played ?? p.stats?.gp ?? 0,
-      goals: p.goals ?? p.stats?.goals ?? 0,
-      assists: p.assists ?? p.stats?.assists ?? 0,
-      points: p.points ?? p.stats?.points ?? 0,
-      plusMinus: p.plus_minus ?? p.stats?.plus_minus ?? 0,
-      pims: p.penalty_minutes ?? p.stats?.pims ?? 0,
-      saves: p.saves ?? p.stats?.saves ?? null,
-      savesPct: p.save_percentage ?? p.stats?.save_pct ?? null,
-    },
-    gameLog: p.game_log ?? [],
-  }));
+  const players = Object.values(map).map((p) => {
+    // headshot: p.headshot is an object with image variants — use the largest available
+    const headshotUrl =
+      p.headshot?.['300x400']?.url ??
+      p.headshot?.full?.url ??
+      p.headshot?.thumbnail?.url ?? '';
 
-  write('roster.json', normalized);
+    // matches: p.matches is an object of game entries with stats
+    const gameLog = Object.values(p.matches ?? {}).map((m) => ({
+      game_id: String(m.match_id ?? ''),
+      goals:   m.goals ?? 0,
+      assists: m.assists ?? 0,
+      points:  (m.goals ?? 0) + (m.assists ?? 0),
+    }));
+
+    // Season totals — sum across game log
+    const totals = gameLog.reduce(
+      (acc, g) => ({ gp: acc.gp + 1, goals: acc.goals + g.goals, assists: acc.assists + g.assists }),
+      { gp: 0, goals: 0, assists: 0 }
+    );
+
+    return {
+      id:          p.personId ?? p.champion_data_id,
+      name:        p.displayName ?? p.fullname ?? '',
+      slug:        slugify(p.displayName ?? p.fullname ?? ''),
+      number:      p.jerseyNumber ?? '',
+      position:    normalizePosition(p.position ?? ''),
+      hometown:    p.hometown ?? '',
+      college:     '',
+      age:         p.ageToday ?? null,
+      height:      p.height ?? '',
+      weight:      p.weight ? `${p.weight} lbs` : '',
+      headshotUrl,
+      stats: {
+        gp:         totals.gp,
+        goals:      totals.goals,
+        assists:    totals.assists,
+        points:     totals.goals + totals.assists,
+        plusMinus:  0,
+        pims:       0,
+        saves:      p.position === 'G' ? (p.saves ?? null) : null,
+        savesPct:   p.position === 'G' ? (p.save_percentage ?? null) : null,
+      },
+      gameLog,
+    };
+  });
+
+  write('roster.json', players);
 }
 
 // ── 4. Team Stat Leaders ──────────────────────────────────────────────────────
 async function fetchTeamStats() {
   console.log('Fetching team stats...');
-  const raw = await fetchSwarmAjax('nll_sportlogiq', { getStatLeaders: 'true' });
-  write('team-stats.json', raw?.data ?? raw ?? {});
+  try {
+    const raw = await fetchSwarmAjax('nll_sportlogiq', { getStatLeaders: 'true' });
+    write('team-stats.json', raw?.data ?? raw ?? {});
+  } catch {
+    console.log('Team stats unavailable — writing empty object');
+    write('team-stats.json', {});
+  }
 }
 
 // ── 5. News + Highlights (scrape georgiaswarm.com) ────────────────────────────
