@@ -1,8 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { TeamLogo } from '@/components/ui/TeamLogo';
 import { Calendar, Clock, MapPin, Ticket } from 'lucide-react';
 import type { Game } from '@/lib/data';
+import logoMapData from '@/data/team-logos.json';
+
+const swarmLogoUrl = (logoMapData as Record<string, string>)['GEO'] ?? '';
 
 function useCountdown(targetDate: string) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -67,8 +71,12 @@ export function NextGameHero({ game }: Props) {
         {/* Teams */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <div className="w-14 h-14 bg-swarm-blue rounded-2xl flex items-center justify-center text-swarm-gold font-bold text-xl">
-              GS
+            <div className="w-14 h-14 bg-swarm-blue/40 rounded-2xl flex items-center justify-center overflow-hidden">
+              {swarmLogoUrl ? (
+                <Image src={swarmLogoUrl} alt="Georgia Swarm" width={56} height={56} className="object-contain" />
+              ) : (
+                <span className="text-swarm-gold font-bold text-xl">GS</span>
+              )}
             </div>
             <div>
               <div className="text-swarm-text font-bold text-lg">Georgia Swarm</div>

@@ -1,6 +1,10 @@
+import Image from 'next/image';
 import { TeamLogo } from '@/components/ui/TeamLogo';
 import type { Game } from '@/lib/data';
 import Link from 'next/link';
+import logoMapData from '@/data/team-logos.json';
+
+const swarmLogoUrl = (logoMapData as Record<string, string>)['GEO'] ?? '';
 
 type Props = { game: Game };
 
@@ -22,8 +26,12 @@ export function RecentResult({ game }: Props) {
 
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-swarm-blue rounded-full flex items-center justify-center text-swarm-gold font-bold text-xs">
-            GS
+          <div className="w-8 h-8 bg-swarm-blue/40 rounded-full flex items-center justify-center overflow-hidden">
+            {swarmLogoUrl ? (
+              <Image src={swarmLogoUrl} alt="Georgia Swarm" width={32} height={32} className="object-contain" />
+            ) : (
+              <span className="text-swarm-gold font-bold text-xs">GS</span>
+            )}
           </div>
           <span className="text-swarm-text font-medium text-sm">Georgia Swarm</span>
         </div>

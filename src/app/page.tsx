@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="flex items-center gap-1.5 bg-swarm-gold/10 border border-swarm-gold/20 rounded-full px-3 py-1">
           <Trophy size={12} className="text-swarm-gold" />
           <span className="text-swarm-gold text-xs font-semibold">
-            {record.wins}–{record.losses} · 2024–25 Season
+            {record.wins}–{record.losses} · 2025–26 Season
           </span>
         </div>
       </div>

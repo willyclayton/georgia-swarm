@@ -1,9 +1,13 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import logoMapData from '@/data/team-logos.json';
+
+const swarmLogoUrl = (logoMapData as Record<string, string>)['GEO'] ?? '';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -23,8 +27,12 @@ export function TopNav() {
   return (
     <nav className="hidden md:flex sticky top-0 z-50 bg-swarm-navy border-b border-swarm-border items-center px-6 h-14">
       <Link href="/" className="flex items-center gap-2 mr-8 flex-shrink-0">
-        <div className="w-8 h-8 bg-swarm-gold rounded-full flex items-center justify-center text-swarm-navy font-bold text-sm">
-          GS
+        <div className="w-8 h-8 bg-swarm-gold/20 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
+          {swarmLogoUrl ? (
+            <Image src={swarmLogoUrl} alt="Georgia Swarm" width={32} height={32} className="object-contain" />
+          ) : (
+            <span className="text-swarm-gold font-bold text-xs">GS</span>
+          )}
         </div>
         <span className="font-bold text-swarm-text text-sm tracking-wide">GEORGIA SWARM</span>
       </Link>
