@@ -32,7 +32,7 @@ export default function RosterPage() {
   if (allPlayers.length === 0) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-6">
-        <PageHeader title="Roster" subtitle="2024–25 Season" />
+        <PageHeader title="Roster" subtitle="2025–26 Season" />
         <div className="text-center py-20 text-swarm-muted">
           Roster data not yet loaded. Run the data fetch script.
         </div>

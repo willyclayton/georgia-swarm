@@ -22,7 +22,7 @@ export default function PlayoffsPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-6">
-      <PageHeader title="Playoffs" subtitle="2024–25 NLL Postseason" />
+      <PageHeader title="Playoffs" subtitle="2025–26 NLL Postseason" />
 
       {!hasData ? (
         <div className="bg-swarm-card rounded-2xl p-10 border border-swarm-border text-center">

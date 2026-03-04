@@ -11,14 +11,14 @@ export default function StandingsPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-6">
-      <PageHeader title="Standings" subtitle="2024–25 NLL Regular Season" />
+      <PageHeader title="Standings" subtitle="2025–26 NLL Regular Season" />
 
       {/* Swarm rank highlight */}
       <div className="flex items-center gap-3 bg-swarm-blue/10 border border-swarm-blue/30 rounded-2xl p-4 mb-5">
         <Trophy className="text-swarm-gold" size={24} />
         <div>
           <p className="text-swarm-text font-bold">Georgia Swarm</p>
-          <p className="text-swarm-muted text-sm">{record.wins}W – {record.losses}L · 2024–25</p>
+          <p className="text-swarm-muted text-sm">{record.wins}W – {record.losses}L · 2025–26</p>
         </div>
       </div>
 

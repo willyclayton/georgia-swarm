@@ -115,13 +115,13 @@ async function fetchRoster() {
       headshotUrl,
       stats: {
         gp,
-        goals:      0,
-        assists:    0,
-        points:     0,
-        plusMinus:  0,
-        pims:       0,
-        saves:      p.position === 'G' ? (p.saves ?? null) : null,
-        savesPct:   p.position === 'G' ? (p.save_percentage ?? null) : null,
+        goals:     p.goals     ?? p.g   ?? 0,
+        assists:   p.assists   ?? p.a   ?? 0,
+        points:    p.points    ?? p.pts ?? 0,
+        plusMinus: p.plus_minus ?? p.plusMinus ?? p.pm ?? 0,
+        pims:      p.penalty_minutes ?? p.pims ?? p.pim ?? 0,
+        saves:     p.position === 'G' ? (p.saves ?? null) : null,
+        savesPct:  p.position === 'G' ? (p.save_percentage ?? null) : null,
       },
       gameLog: [],
     };
@@ -130,7 +130,116 @@ async function fetchRoster() {
   write('roster.json', players);
 }
 
-// ── 4. Team Stat Leaders ──────────────────────────────────────────────────────
+// ── 4. Player Stats (NLL stats_players API) ───────────────────────────────────
+async function fetchPlayerStats() {
+  console.log('Fetching player stats...');
+  try {
+    const url = `${NLL_API}?data_type=stats_players&season_id=${SEASON_ID}`;
+    const raw = await fetchJson(url);
+    const allStats = raw?.stats ?? [];
+
+    // Filter to Georgia Swarm players by team_id
+    const swarmStats = allStats.filter(p =>
+      String(p.team?.champion_data_id) === String(TEAM_ID)
+    );
+    console.log(`  Found ${swarmStats.length} Swarm players in stats feed`);
+
+    // Build map keyed by personId string
+    const statsMap = new Map(swarmStats.map(p => [
+      String(p.id),
+      {
+        gp:      parseInt(p.GAME_PLAYED)     || 0,
+        goals:   parseInt(p.GOAL)            || 0,
+        assists: parseInt(p.ASSIST_GOAL)     || 0,
+        points:  parseInt(p.POINTS)          || 0,
+        pims:    parseInt(p.PENALTY_MINUTES) || 0,
+      },
+    ]));
+
+    // Merge into roster.json by personId
+    const { readFileSync } = await import('fs');
+    const players = JSON.parse(readFileSync(join(DATA_DIR, 'roster.json'), 'utf-8'));
+    let merged = 0;
+    for (const p of players) {
+      const s = statsMap.get(String(p.id));
+      if (s) { Object.assign(p.stats, s); merged++; }
+    }
+    write('roster.json', players);
+    console.log(`  Merged stats for ${merged} players`);
+  } catch (err) {
+    console.log(`Player stats unavailable: ${err.message}`);
+  }
+}
+
+// ── 5. Box Scores (per-game NLL API) ──────────────────────────────────────────
+async function fetchBoxScores() {
+  console.log('Fetching box scores...');
+  const { readFileSync } = await import('fs');
+
+  const rawSchedule = JSON.parse(readFileSync(join(DATA_DIR, 'schedule.json'), 'utf-8'));
+  const completedGames = [];
+  for (const week of rawSchedule) {
+    if (!week.matches) continue;
+    for (const match of Object.values(week.matches)) {
+      if (match.status?.code === 'COMP' &&
+          (match.squads?.home?.id === TEAM_ID || match.squads?.away?.id === TEAM_ID)) {
+        completedGames.push(match.id);
+      }
+    }
+  }
+  console.log(`  Found ${completedGames.length} completed games`);
+
+  let boxScores = {};
+  try {
+    boxScores = JSON.parse(readFileSync(join(DATA_DIR, 'box-scores.json'), 'utf-8'));
+  } catch { /* first run */ }
+
+  for (const gameId of completedGames) {
+    if (boxScores[gameId]?.quarter_scores?.length > 0) continue;
+
+    try {
+      const url = `${NLL_API}?data_type=game_detail&match_id=${gameId}&season_id=${SEASON_ID}`;
+      const raw = await fetchJson(url);
+
+      // Quarter scores: q1-q4, plus OT if it occurred (ot1 is a number, not "-")
+      const bs = raw?.box_score;
+      const quarter_scores = ['q1', 'q2', 'q3', 'q4']
+        .map(q => ({
+          home: typeof bs?.home?.[q] === 'number' ? bs.home[q] : 0,
+          away: typeof bs?.away?.[q] === 'number' ? bs.away[q] : 0,
+        }));
+      if (typeof bs?.home?.ot1 === 'number') {
+        quarter_scores.push({ home: bs.home.ot1, away: bs.away.ot1 });
+      }
+
+      // Determine Swarm side (home or away)
+      const swarmSide = raw?.details?.home?.id === TEAM_ID ? 'home' : 'away';
+
+      // Top performers from stat leaders on Swarm's side
+      const leaders = raw?.stats_players?.leaders?.[swarmSide] ?? {};
+      const playerMap = raw?.players ?? {};
+      const seen = new Set();
+      const top_performers = Object.entries(leaders)
+        .map(([stat, l]) => ({
+          name: playerMap[l.personId]?.fullname ?? '',
+          stat,
+          value: l.value ?? 0,
+        }))
+        .filter(p => p.name && p.value > 0 && !seen.has(p.name) && seen.add(p.name))
+        .sort((a, b) => b.value - a.value)
+        .slice(0, 5);
+
+      boxScores[gameId] = { quarter_scores, top_performers };
+      console.log(`  ✓ game ${gameId}: ${quarter_scores.length}Q, ${top_performers.length} performers`);
+    } catch (err) {
+      console.log(`  ✗ game ${gameId}: ${err.message}`);
+    }
+  }
+
+  write('box-scores.json', boxScores);
+}
+
+// ── 6. Team Stat Leaders ──────────────────────────────────────────────────────
 async function fetchTeamStats() {
   console.log('Fetching team stats...');
   try {
@@ -142,7 +251,7 @@ async function fetchTeamStats() {
   }
 }
 
-// ── 5. News + Highlights (scrape georgiaswarm.com) ────────────────────────────
+// ── 7. News + Highlights (scrape georgiaswarm.com) ────────────────────────────
 async function fetchNewsAndHighlights() {
   console.log('Fetching news & highlights...');
   const res = await fetch('https://georgiaswarm.com/news/all-news/');
@@ -204,7 +313,7 @@ async function fetchNewsAndHighlights() {
   write('news.json', news);
 }
 
-// ── 6. Playoff Bracket ────────────────────────────────────────────────────────
+// ── 8. Playoff Bracket ────────────────────────────────────────────────────────
 async function fetchPlayoffBracket() {
   console.log('Fetching playoff bracket...');
   try {
@@ -262,7 +371,9 @@ async function main() {
   const tasks = [
     fetchStandings,
     fetchSchedule,
+    fetchBoxScores,
     fetchRoster,
+    fetchPlayerStats,
     fetchTeamStats,
     fetchNewsAndHighlights,
     fetchPlayoffBracket,

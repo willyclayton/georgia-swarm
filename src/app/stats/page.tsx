@@ -19,7 +19,7 @@ export default function StatsPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-6">
-      <PageHeader title="Stats" subtitle="2024–25 Season Leaders" />
+      <PageHeader title="Stats" subtitle="2025–26 Season Leaders" />
 
       {/* Tab bar */}
       <div className="flex gap-1 bg-swarm-surface rounded-2xl p-1 mb-6">

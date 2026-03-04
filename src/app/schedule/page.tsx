@@ -12,7 +12,7 @@ export default function SchedulePage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-6">
-      <PageHeader title="Schedule" subtitle="2024–25 Season" />
+      <PageHeader title="Schedule" subtitle="2025–26 Season" />
 
       {schedule.length === 0 && (
         <div className="text-center py-20 text-swarm-muted">

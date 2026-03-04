@@ -5,6 +5,7 @@ import highlightsData from '@/data/highlights.json';
 import newsData from '@/data/news.json';
 import teamStatsData from '@/data/team-stats.json';
 import playoffBracketData from '@/data/playoff-bracket.json';
+import boxScoresData from '@/data/box-scores.json';
 
 const rosterRaw: unknown[] = Array.isArray(rosterRawImport) ? rosterRawImport : [];
 
@@ -119,6 +120,11 @@ function normalizeSchedule(): Game[] {
       if (statusCode === 'COMP') gameStatus = 'final';
       else if (statusCode === 'LIVE' || statusCode === 'INPROGRESS') gameStatus = 'live';
 
+      const boxScore = (boxScoresData as Record<string, {
+        quarter_scores?: { home: number; away: number }[];
+        top_performers?: TopPerformer[];
+      }>)[String(match.id)];
+
       games.push({
         game_id: String(match.id),
         date: date.startDate + 'T' + date.startTime,
@@ -132,6 +138,8 @@ function normalizeSchedule(): Game[] {
         opponent: opponent.displayName ?? `${opponent.name} ${opponent.nickname}`,
         opponent_code: opponent.code,
         venue: venue?.name,
+        ...(boxScore?.quarter_scores && { quarter_scores: boxScore.quarter_scores }),
+        ...(boxScore?.top_performers && { top_performers: boxScore.top_performers }),
       });
     }
   }
