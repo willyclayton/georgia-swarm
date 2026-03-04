@@ -57,6 +57,13 @@
   --color-swarm-gold-dim: #c99830;
   --color-swarm-text: #e2e8f0;
   --color-swarm-muted: #7b9bbf;
+  --font-display: var(--font-barlow-condensed);
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  }
 }
 
 :root {

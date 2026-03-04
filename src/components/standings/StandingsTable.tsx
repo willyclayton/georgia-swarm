@@ -1,5 +1,17 @@
+'use client';
 import { TeamLogo } from '@/components/ui/TeamLogo';
 import type { StandingsTeam } from '@/lib/data';
+import { motion } from 'framer-motion';
+
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.06 } },
+};
+
+const row = {
+  hidden: { opacity: 0, x: -8 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.2 } },
+};
 
 type Props = { teams: StandingsTeam[] };
 
@@ -16,15 +28,21 @@ export function StandingsTable({ teams }: Props) {
         <span className="text-center">PCT</span>
         <span className="text-center">+/-</span>
       </div>
-      <div className="divide-y divide-swarm-border">
+      <motion.div
+        className="divide-y divide-swarm-border"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
         {sorted.map((team, i) => {
           const isSwarm = team.team_code === 'GEO';
           const diff = (team.gf ?? 0) - (team.ga ?? 0);
           return (
-            <div
+            <motion.div
               key={team.team_code}
+              variants={row}
               className={`grid grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-2 items-center px-4 py-3 ${
-                isSwarm ? 'bg-swarm-blue/15 border-l-2 border-l-swarm-gold' : ''
+                isSwarm ? 'border-l-[3px] border-l-swarm-gold bg-swarm-blue/15' : ''
               }`}
             >
               <div className="flex items-center gap-2.5">
@@ -34,16 +52,16 @@ export function StandingsTable({ teams }: Props) {
                   {team.team_name}
                 </span>
               </div>
-              <span className="text-center text-swarm-text text-sm tabular-nums">{team.wins}</span>
-              <span className="text-center text-swarm-text text-sm tabular-nums">{team.losses}</span>
+              <span className="text-center font-display font-bold text-swarm-text tabular-nums">{team.wins}</span>
+              <span className="text-center font-display font-bold text-swarm-text tabular-nums">{team.losses}</span>
               <span className="text-center text-swarm-muted text-sm tabular-nums">{(team.pct * 100).toFixed(0)}%</span>
               <span className={`text-center text-sm tabular-nums ${diff > 0 ? 'text-green-400' : diff < 0 ? 'text-red-400' : 'text-swarm-muted'}`}>
                 {diff > 0 ? '+' : ''}{diff}
               </span>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }

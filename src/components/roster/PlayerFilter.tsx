@@ -1,5 +1,6 @@
 'use client';
 import { useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
 
 const POSITIONS = ['All', 'Forward', 'Transition', 'Defense', 'Goalie'] as const;
 const SORTS = [
@@ -35,9 +36,11 @@ export function PlayerFilter({ onPositionChange, onSortChange }: Props) {
     <div className="space-y-3">
       <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
         {POSITIONS.map((pos) => (
-          <button
+          <motion.button
             key={pos}
             onClick={() => handlePos(pos)}
+            whileTap={{ scale: 0.92 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 24 }}
             className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               activePos === pos
                 ? 'bg-swarm-gold text-swarm-navy'
@@ -45,16 +48,18 @@ export function PlayerFilter({ onPositionChange, onSortChange }: Props) {
             }`}
           >
             {pos}
-          </button>
+          </motion.button>
         ))}
       </div>
       <div className="flex items-center gap-2">
         <span className="text-swarm-muted text-xs">Sort:</span>
         <div className="flex gap-1">
           {SORTS.map((s) => (
-            <button
+            <motion.button
               key={s.value}
               onClick={() => handleSort(s.value)}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 24 }}
               className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
                 activeSort === s.value
                   ? 'bg-swarm-blue/25 text-swarm-gold'
@@ -62,7 +67,7 @@ export function PlayerFilter({ onPositionChange, onSortChange }: Props) {
               }`}
             >
               {s.label}
-            </button>
+            </motion.button>
           ))}
         </div>
       </div>

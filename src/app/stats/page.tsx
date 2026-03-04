@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { getRoster } from '@/lib/data';
 import { LeaderBoard } from '@/components/stats/LeaderBoard';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { motion } from 'framer-motion';
 
 const TABS = [
   { key: 'goals', label: 'Goals' },
@@ -21,19 +22,24 @@ export default function StatsPage() {
     <div className="max-w-2xl mx-auto px-4 py-6">
       <PageHeader title="Stats" subtitle="2025–26 Season Leaders" />
 
-      {/* Tab bar */}
-      <div className="flex gap-1 bg-swarm-surface rounded-2xl p-1 mb-6">
+      {/* Tab bar with spring pill */}
+      <div className="flex gap-1 bg-swarm-surface rounded-2xl p-1 mb-6 relative">
         {TABS.map((t) => (
           <button
             key={t.key}
             onClick={() => setTab(t.key)}
-            className={`flex-1 py-2 rounded-xl text-sm font-medium transition-colors ${
-              tab === t.key
-                ? 'bg-swarm-card text-swarm-gold shadow-sm'
-                : 'text-swarm-muted hover:text-swarm-text'
-            }`}
+            className="relative flex-1 py-2 rounded-xl text-sm font-medium transition-colors z-10"
           >
-            {t.label}
+            {tab === t.key && (
+              <motion.div
+                layoutId="stat-tab-indicator"
+                className="absolute inset-0 bg-swarm-card rounded-xl shadow-sm"
+                transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+              />
+            )}
+            <span className={`relative z-10 transition-colors ${tab === t.key ? 'text-swarm-gold' : 'text-swarm-muted hover:text-swarm-text'}`}>
+              {t.label}
+            </span>
           </button>
         ))}
       </div>
