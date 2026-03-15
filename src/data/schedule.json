@@ -848,6 +848,10 @@
         "weekOrder": 4,
         "squads": {
           "away": {
+            "score": {
+              "goals": 14,
+              "score": 14
+            },
             "id": 543,
             "code": "VAN",
             "name": "Vancouver",
@@ -855,6 +859,10 @@
             "displayName": "Vancouver Warriors"
           },
           "home": {
+            "score": {
+              "goals": 7,
+              "score": 7
+            },
             "id": 539,
             "code": "GA",
             "name": "Georgia",
@@ -868,11 +876,18 @@
           "utcMatchStart": "2026-03-14T23:30:00.000Z"
         },
         "status": {
-          "id": 8,
-          "name": "Scheduled",
-          "code": "SCHED",
-          "typeId": 2,
-          "typeName": "Upcoming"
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
         },
         "type": {
           "id": 1,
@@ -884,7 +899,8 @@
           "code": "GSA",
           "name": "Gas South Arena",
           "timeZone": "US/Eastern"
-        }
+        },
+        "winningSquadId": 543
       }
     },
     "name": "Week 16",
