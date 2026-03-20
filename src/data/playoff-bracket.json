@@ -6,7 +6,7 @@
         "name": "Saskatchewan Rush",
         "city": "Saskatchewan",
         "nickname": "Rush",
-        "clinch_text": "",
+        "clinch_text": "x",
         "logo_url": "https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Saskatchewan-Rush_Icon_RGB.svg",
         "wins": 11,
         "losses": 3,
@@ -19,7 +19,7 @@
         "goal_diff": 36,
         "goal_diff_avg": 2,
         "position": 1,
-        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://www.saskrush.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Saskatchewan-Rush_Icon_RGB.svg' alt='Rush logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://www.saskrush.com' target='_blank'><span class='location'>Saskatchewan</span><span class='name'>Rush</span></a></div></div>"
+        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://www.saskrush.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Saskatchewan-Rush_Icon_RGB.svg' alt='Rush logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://www.saskrush.com' target='_blank'><span class='location'>Saskatchewan</span><span class='name'>Rush- x</span></a></div></div>"
       },
       {
         "team_id": 543,
