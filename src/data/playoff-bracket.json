@@ -266,7 +266,7 @@
         "name": "Philadelphia Wings",
         "city": "Philadelphia",
         "nickname": "Wings",
-        "clinch_text": "",
+        "clinch_text": "y",
         "logo_url": "https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Philadelphia-Wings_Icon_RGB.svg",
         "wins": 3,
         "losses": 11,
@@ -279,7 +279,7 @@
         "goal_diff": -35,
         "goal_diff_avg": -2,
         "position": 14,
-        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://wingslax.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Philadelphia-Wings_Icon_RGB.svg' alt='Wings logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://wingslax.com' target='_blank'><span class='location'>Philadelphia</span><span class='name'>Wings</span></a></div></div>"
+        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://wingslax.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Philadelphia-Wings_Icon_RGB.svg' alt='Wings logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://wingslax.com' target='_blank'><span class='location'>Philadelphia</span><span class='name'>Wings- y</span></a></div></div>"
       }
     ]
   }
