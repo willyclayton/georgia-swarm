@@ -984,6 +984,10 @@
         "weekOrder": 2,
         "squads": {
           "away": {
+            "score": {
+              "goals": 12,
+              "score": 12
+            },
             "id": 539,
             "code": "GA",
             "name": "Georgia",
@@ -991,6 +995,10 @@
             "displayName": "Georgia Swarm"
           },
           "home": {
+            "score": {
+              "goals": 7,
+              "score": 7
+            },
             "id": 545,
             "code": "OTT",
             "name": "Ottawa",
@@ -1004,11 +1012,18 @@
           "utcMatchStart": "2026-03-28T23:00:00.000Z"
         },
         "status": {
-          "id": 8,
-          "name": "Scheduled",
-          "code": "SCHED",
-          "typeId": 2,
-          "typeName": "Upcoming"
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
         },
         "type": {
           "id": 1,
@@ -1020,7 +1035,8 @@
           "code": "CTC",
           "name": "Canadian Tire Centre",
           "timeZone": "Canada/Eastern"
-        }
+        },
+        "winningSquadId": 539
       }
     },
     "name": "Week 18",
