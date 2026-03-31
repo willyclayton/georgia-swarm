@@ -226,7 +226,7 @@
         "name": "Calgary Roughnecks",
         "city": "Calgary",
         "nickname": "Roughnecks",
-        "clinch_text": "",
+        "clinch_text": "y",
         "logo_url": "https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Calgary-Roughnecks_Icon_RGB__onBLK.svg",
         "wins": 4,
         "losses": 11,
@@ -239,7 +239,7 @@
         "goal_diff": -25,
         "goal_diff_avg": -1,
         "position": 12,
-        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://calgaryroughnecks.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Calgary-Roughnecks_Icon_RGB__onBLK.svg' alt='Roughnecks logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://calgaryroughnecks.com' target='_blank'><span class='location'>Calgary</span><span class='name'>Roughnecks</span></a></div></div>"
+        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://calgaryroughnecks.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Calgary-Roughnecks_Icon_RGB__onBLK.svg' alt='Roughnecks logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://calgaryroughnecks.com' target='_blank'><span class='location'>Calgary</span><span class='name'>Roughnecks- y</span></a></div></div>"
       },
       {
         "team_id": 548,
