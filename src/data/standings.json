@@ -66,7 +66,7 @@
         "name": "Georgia Swarm",
         "city": "Georgia",
         "nickname": "Swarm",
-        "clinch_text": "",
+        "clinch_text": "x",
         "logo_url": "https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Georgia-Swarm_Primary_RGB_4C-300x254.png",
         "wins": 10,
         "losses": 5,
@@ -79,14 +79,14 @@
         "goal_diff": 27,
         "goal_diff_avg": 1,
         "position": 4,
-        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://www.georgiaswarm.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Georgia-Swarm_Primary_RGB_4C-300x254.png' alt='Swarm logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://www.georgiaswarm.com' target='_blank'><span class='location'>Georgia</span><span class='name'>Swarm</span></a></div></div>"
+        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://www.georgiaswarm.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Georgia-Swarm_Primary_RGB_4C-300x254.png' alt='Swarm logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://www.georgiaswarm.com' target='_blank'><span class='location'>Georgia</span><span class='name'>Swarm- x</span></a></div></div>"
       },
       {
         "team_id": 509,
         "name": "Buffalo Bandits",
         "city": "Buffalo",
         "nickname": "Bandits",
-        "clinch_text": "",
+        "clinch_text": "x",
         "logo_url": "https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Buffalo-Bandits_Icon_RGB.svg",
         "wins": 10,
         "losses": 6,
@@ -99,14 +99,14 @@
         "goal_diff": 14,
         "goal_diff_avg": 0,
         "position": 5,
-        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://bandits.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Buffalo-Bandits_Icon_RGB.svg' alt='Bandits logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://bandits.com' target='_blank'><span class='location'>Buffalo</span><span class='name'>Bandits</span></a></div></div>"
+        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://bandits.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Buffalo-Bandits_Icon_RGB.svg' alt='Bandits logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://bandits.com' target='_blank'><span class='location'>Buffalo</span><span class='name'>Bandits- x</span></a></div></div>"
       },
       {
         "team_id": 515,
         "name": "Toronto Rock",
         "city": "Toronto",
         "nickname": "Rock",
-        "clinch_text": "",
+        "clinch_text": "x",
         "logo_url": "https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Toronto-Rock_Logo_RGB_onBLK.svg",
         "wins": 10,
         "losses": 6,
@@ -119,7 +119,7 @@
         "goal_diff": 6,
         "goal_diff_avg": 0,
         "position": 6,
-        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://torontorock.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Toronto-Rock_Logo_RGB_onBLK.svg' alt='Rock logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://torontorock.com' target='_blank'><span class='location'>Toronto</span><span class='name'>Rock</span></a></div></div>"
+        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://torontorock.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Toronto-Rock_Logo_RGB_onBLK.svg' alt='Rock logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://torontorock.com' target='_blank'><span class='location'>Toronto</span><span class='name'>Rock- x</span></a></div></div>"
       },
       {
         "team_id": 545,
