@@ -226,7 +226,7 @@
         "name": "Oshawa FireWolves",
         "city": "Oshawa",
         "nickname": "FireWolves",
-        "clinch_text": "",
+        "clinch_text": "y",
         "logo_url": "https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Albany-FireWolves_Icon_RGB.svg",
         "wins": 5,
         "losses": 11,
@@ -239,7 +239,7 @@
         "goal_diff": -30,
         "goal_diff_avg": -1,
         "position": 12,
-        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://oshawafirewolves.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Albany-FireWolves_Icon_RGB.svg' alt='FireWolves logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://oshawafirewolves.com' target='_blank'><span class='location'>Oshawa</span><span class='name'>FireWolves</span></a></div></div>"
+        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://oshawafirewolves.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Albany-FireWolves_Icon_RGB.svg' alt='FireWolves logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://oshawafirewolves.com' target='_blank'><span class='location'>Oshawa</span><span class='name'>FireWolves- y</span></a></div></div>"
       },
       {
         "team_id": 524,
