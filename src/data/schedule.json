@@ -1060,6 +1060,10 @@
         "weekOrder": 7,
         "squads": {
           "away": {
+            "score": {
+              "goals": 9,
+              "score": 9
+            },
             "id": 542,
             "code": "SD",
             "name": "San Diego",
@@ -1067,6 +1071,10 @@
             "displayName": "San Diego Seals"
           },
           "home": {
+            "score": {
+              "goals": 7,
+              "score": 7
+            },
             "id": 539,
             "code": "GA",
             "name": "Georgia",
@@ -1080,11 +1088,18 @@
           "utcMatchStart": "2026-04-12T20:00:00.000Z"
         },
         "status": {
-          "id": 8,
-          "name": "Scheduled",
-          "code": "SCHED",
-          "typeId": 2,
-          "typeName": "Upcoming"
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
         },
         "type": {
           "id": 1,
@@ -1096,7 +1111,8 @@
           "code": "GSA",
           "name": "Gas South Arena",
           "timeZone": "US/Eastern"
-        }
+        },
+        "winningSquadId": 542
       }
     },
     "name": "Week 20",
