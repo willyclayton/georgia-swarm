@@ -206,7 +206,7 @@
         "name": "Rochester Knighthawks",
         "city": "Rochester",
         "nickname": "Knighthawks",
-        "clinch_text": "",
+        "clinch_text": "y",
         "logo_url": "https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Rochester-Knighthawks_Icon_RGB.svg",
         "wins": 6,
         "losses": 10,
@@ -219,7 +219,7 @@
         "goal_diff": -22,
         "goal_diff_avg": -1,
         "position": 11,
-        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://rochesterknighthawks.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Rochester-Knighthawks_Icon_RGB.svg' alt='Knighthawks logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://rochesterknighthawks.com' target='_blank'><span class='location'>Rochester</span><span class='name'>Knighthawks</span></a></div></div>"
+        "team_cell_data": "<div class='table_team_info'><div class='logo'><a href='https://rochesterknighthawks.com' target='_blank'><img src='https://nllmetaserver.aordev.com/wp-content/uploads/2022/10/Rochester-Knighthawks_Icon_RGB.svg' alt='Knighthawks logo' class='skip-lazy'></a></div><div class='team_loc''><a href='https://rochesterknighthawks.com' target='_blank'><span class='location'>Rochester</span><span class='name'>Knighthawks- y</span></a></div></div>"
       },
       {
         "team_id": 548,
