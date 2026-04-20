@@ -1187,6 +1187,10 @@
         "weekOrder": 9,
         "squads": {
           "away": {
+            "score": {
+              "goals": 17,
+              "score": 17
+            },
             "id": 539,
             "code": "GA",
             "name": "Georgia",
@@ -1194,6 +1198,10 @@
             "displayName": "Georgia Swarm"
           },
           "home": {
+            "score": {
+              "goals": 12,
+              "score": 12
+            },
             "id": 546,
             "code": "ROC",
             "name": "Rochester",
@@ -1207,11 +1215,18 @@
           "utcMatchStart": "2026-04-19T19:00:00.000Z"
         },
         "status": {
-          "id": 8,
-          "name": "Scheduled",
-          "code": "SCHED",
-          "typeId": 2,
-          "typeName": "Upcoming"
+          "period": 4,
+          "periodSecs": 900,
+          "periodDisplay": "Full Time",
+          "periodTime": "15:00",
+          "remainingSecs": 0,
+          "remainingDisplay": "Full Time",
+          "remainingTime": "00:00",
+          "id": 22,
+          "name": "Complete",
+          "code": "COMP",
+          "typeId": 4,
+          "typeName": "Complete"
         },
         "type": {
           "id": 1,
@@ -1223,7 +1238,8 @@
           "code": "BCA",
           "name": "Blue Cross Arena",
           "timeZone": "US/Eastern"
-        }
+        },
+        "winningSquadId": 539
       }
     },
     "name": "Week 21",
